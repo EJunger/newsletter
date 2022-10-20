@@ -26,18 +26,20 @@ tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
 config = { version = "0.11", default-features = false, features = ["yaml"] }
 chrono = "0.4.15"
 uuid = { version = "1", features = ["v4", "serde"] }
+sqlx = { version = "0.6", default-features = false, features = ["runtime-actix-rustls", "macros", "postgres", "uuid", "chrono", "migrate", "offline"] }
 
-[dependencies.sqlx]
-version = "0.6"
-default-features = false
-features = [
-    "runtime-actix-rustls",
-    "macros",
-    "postgres",
-    "uuid",
-    "chrono",
-    "migrate"
-]
+# [dependencies.sqlx]
+# version = "0.6"
+# default-features = false
+# features = [
+#     "runtime-actix-rustls",
+#     "macros",
+#     "postgres",
+#     "uuid",
+#     "chrono",
+#     "migrate",
+#     "offline",
+# ]
 
 [dev-dependencies]
 reqwest = "0.11.12"

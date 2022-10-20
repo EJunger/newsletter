@@ -56,7 +56,6 @@ pub async fn configure_database(config: &DatabaseSettings) -> PgPool {
         .execute(format!(r#"CREATE DATABASE "{}";"#, config.database_name).as_str())
         .await
         .expect("Failed to create test database.");
-
     // Migrate to new DB
     let connection_pool = PgPool::connect(config.connection_string().expose_secret())
         .await
