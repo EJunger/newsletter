@@ -33,8 +33,7 @@ services:
        value: ${newsletter.DATABASE}
 databases:
   - engine: PG
-    name: postgres
+    name: newsletter-db
     num_nodes: 1
     size: db-s-dev-database
     version: "12"
-
