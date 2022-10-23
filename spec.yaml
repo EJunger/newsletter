@@ -1,6 +1,6 @@
 databases:
   - engine: PG
-    name: newsletter_db
+    name: dba 
     num_nodes: 1
     size: db-s-dev-database
     version: "12"
