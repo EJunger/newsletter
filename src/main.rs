@@ -11,7 +11,7 @@ async fn main() -> std::io::Result<()> {
     let subscriber = get_subscriber("newsletter".into(), "trace".into(), std::io::stdout);
     init_subscriber(subscriber);
 
-    let config = get_configuration().expect("Failed to read configuration.");
+    let config = get_configuration().expect("Failed to read configuration");
     // let connection_pool = PgPoolOptions::new()
     //     .connect_timeout(std::time::Duration::from_secs(2))
     //     .connect_lazy(&config.database.connection_string())
