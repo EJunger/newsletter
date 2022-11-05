@@ -2,7 +2,7 @@ name: newsletter
 region: tor
 services:
  - name: newsletter
- - dockerfile_path: Dockerfile
+   dockerfile_path: Dockerfile
    source_dir: .
    github:
      branch: master
