@@ -7,7 +7,7 @@ services:
    github:
      branch: master
      deploy_on_push: true
-     repo: EJunger/zero2prod
+     repo: EJunger/newsletter
    health_check:
      http_path: /health_check
    http_port: 8000
@@ -18,22 +18,22 @@ services:
    envs:
      - key: APP_DATABASE__USERNAME
        scope: RUN_TIME
-       value: ${newsletter.USERNAME}
+       value: ${newsletterdb.USERNAME}
      - key: APP_DATABASE__PASSWORD
        scope: RUN_TIME
-       value: ${newsletter.PASSWORD}
+       value: ${newsletterdb.PASSWORD}
      - key: APP_DATABASE__HOST
        scope: RUN_TIME
-       value: ${newsletter.HOSTNAME}
+       value: ${newsletterdb.HOSTNAME}
      - key: APP_DATABASE__PORT
        scope: RUN_TIME
-       value: ${newsletter.PORT}
+       value: ${newsletterdb.PORT}
      - key: APP_DATABASE__DATABASE_NAME
        scope: RUN_TIME
-       value: ${newsletter.DATABASE}
+       value: ${newsletterdb.DATABASE}
 databases:
   - engine: PG
-    name: database
+    name: newsletterdb
     num_nodes: 1
     size: db-s-dev-database
     version: "12"

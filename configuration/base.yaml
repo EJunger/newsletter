@@ -6,5 +6,5 @@ database:
   port: 5432
   username: "postgres"
   password: "password"
-  database_name: "database"
+  database_name: "newsletterdb"
   require_ssl: false
