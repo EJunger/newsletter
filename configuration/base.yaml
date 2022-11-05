@@ -6,5 +6,5 @@ database:
   port: 5432
   username: "postgres"
   password: "password"
-  database_name: "prod-database"
+  database_name: "database"
   require_ssl: false
