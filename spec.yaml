@@ -27,7 +27,7 @@ services:
    github:
      branch: master
      deploy_on_push: true
-     repo: EJunger/newsletter
+     repo: EJunger/zero2prod
    health_check:
      http_path: /health_check
    http_port: 8000
